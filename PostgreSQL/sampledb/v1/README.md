@@ -4,7 +4,7 @@ Scripts in this repository can be used to generate a PostgreSQL database suitabl
 the AWS Database Migration Service (DMS) and the AWS Schema Conversion Tool (SCT)
 
 The scripts will generate schema objects and procedures which represent a mock sports  ticketing application.
-The scripts will also load approximately 8.5 GB of data into the source tables.
+The scripts will also load approximately 7 GB of data into the source tables.
 
 The sampledb is not meant as an example of how one might ideally build a sports ticketing system rather,
 it's designed to allow the user to get a feel for how to use the AWS Database Migration Service and Schema Converstion Tool.
@@ -13,6 +13,13 @@ it's designed to allow the user to get a feel for how to use the AWS Database Mi
 * Any version of PostgreSQL compatible with DMS
 * Approximately 10GB of disk space
 * You will need a privileged (DBA) account to execute the scripts
+
+**Steps to install sample DB:**
+* Clone this git repository
+* Navigate to the /PostgreSQL/sampledb/v1 directory
+* Login as master user in RDS PostgreSQL or a privileged user on other PostgreSQL installations to the required PostgreSQL database
+* Execute the following from the postgres prompt- 
+\i install-postgresql.sql 
 
 **Note:**
 * Allow 45 minutes for installation (depending on the size of the host)
